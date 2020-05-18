@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spb.boot.Mapper.TestinfoMapper">
+
+    <resultMap id="BaseTestinfo" type="com.spb.boot.Model.Testinfo">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="testname" jdbcType="VARCHAR" property="testname" />
+        <result column="tel" jdbcType="VARCHAR" property="tel" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+    </resultMap>
+
+    <select id="findTestinfoAll" resultMap="BaseTestinfo">
+        SELECT * FROM testinfo
+    </select>
+
+</mapper>
